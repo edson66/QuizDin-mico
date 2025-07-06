@@ -3,6 +3,8 @@
 #include <string>
 #include <cctype>
 #include <sstream>
+#include <cstdlib>
+#include <ctime>
 
 using namespace std;
 
@@ -50,6 +52,7 @@ int main(){
 }
 
 void jogar(){
+    srand(time(0));
     string tema,dificuldade;
     system("cls");
     cout << "\nDigite a dificuldade que deseja(facil,medio ou dificil): ";
@@ -106,12 +109,35 @@ void jogar(){
     int pontuacao = 0;
     char resposta;
     system("cls");
+    //inicio
+    int indices[3];
+    int sorteados = 0;
+
+    while (sorteados < 3) {
+    int aleatorio = rand() % quantidade;
+
+    // verificar se já foi sorteado
+    bool repetido = false;
+    for (int j = 0; j < sorteados; j++) {
+        if (indices[j] == aleatorio) {
+            repetido = true;
+            break;
+        }
+    }
+
+    if (!repetido) {
+        indices[sorteados] = aleatorio;
+        sorteados++;
+    }
+}
+//fim da intrusão
     cout << "Rodada de 3 perguntas . . .\n";
     for(int i=0;i<3;i++){
-        cout << "Pergunta " << i+1 <<": "<<perguntas[i].pergunta << "\n";
-        cout << "A- " << perguntas[i].opcaoA << "\n";
-        cout << "B- " << perguntas[i].opcaoB << "\n";
-        cout << "C- " << perguntas[i].opcaoC << "\n";
+        int rand=indices[i];
+        cout << "Pergunta " << i+1 <<": "<<perguntas[rand].pergunta << "\n";
+        cout << "A- " << perguntas[rand].opcaoA << "\n";
+        cout << "B- " << perguntas[rand].opcaoB << "\n";
+        cout << "C- " << perguntas[rand].opcaoC << "\n";
         cout << "Digite sua resposta: ";
         cin >> resposta;
         resposta = tolower(resposta);
