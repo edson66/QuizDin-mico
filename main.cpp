@@ -19,7 +19,7 @@ int pontuacao;
 
 void adicionar_pergunta();
 void exibir_menu(int& escolha);
-//void jogar();
+void jogar();
 void exibir_regras();
 //void mostrar_ranking();
 void salvar_no_arquivo(string nome_arquivo,Pergunta p);
@@ -30,7 +30,7 @@ int main(){
      exibir_menu(escolha);
      switch (escolha){
      case 1:
-      //jogar();break;
+      jogar();break;
      case 2:
      exibir_regras(); break;
      case 3:
@@ -59,7 +59,7 @@ void jogar(){
          return;
     }
     cout << "\nEscolha um ou mais destes temas de perguntas --> (portugues,matematica,";
-    cout << "\nesportes,historia,computacao ou ciencia) os separando entre espaços: ";
+    cout << "\nesportes,historia,computacao ou ciencia) os separando entre espacos: ";
     cin.ignore();
     getline(cin,tema);
 
@@ -118,18 +118,25 @@ void jogar(){
         if(resposta == perguntas[i].resposta_correta){
             cout << "\nResposta Correta!! + "<< perguntas[i].pontuacao << "pontos\n";
             pontuacao += perguntas[i].pontuacao;
+            cout << "pressione enter para continuar";
             cin.ignore();
             cin.get();
             system("cls");
         } 
         else{
             cout << "\nNao foi dessa vez, Resposta correta : Letra " << perguntas[i].resposta_correta << "\n";
+            cout << "pressione enter para continuar";
             cin.ignore();
             cin.get();
             system("cls");
+            
         }
     }
-    cout << "\nPontuacao total : " << pontuacao << "\n";
+    cout << "\nPontuacao total : " << pontuacao;
+    cout << "\npressione enter para continuar";
+    cin.ignore();
+    system("cls");
+ 
     delete[] perguntas;
 }
 
@@ -234,22 +241,22 @@ void exibir_menu(int& escolha){
 void exibir_regras(){
     system("cls");
     cout << "+==================== REGRAS DO QUIZ ====================+\n";
-    cout << "|                                                       |\n";
-    cout << "| 1. O jogo eh composto por rodadas de 3 perguntas.       |\n";
+    cout << "|                                                        |\n";
+    cout << "| 1. O jogo eh composto por rodadas de 3 perguntas.      |\n";
     cout << "| 2. Voce escolhe a dificuldade: facil, medio ou dificil.|\n";
     cout << "| 3. A dificuldade afeta a pontuacao:                    |\n";
-    cout << "|     - Facil   => 50 pontos                            |\n";
-    cout << "|     - Medio   => 75 pontos                            |\n";
-    cout << "|     - Dificil => 100 pontos                           |\n";
+    cout << "|     - Facil   => 50 pontos                             |\n";
+    cout << "|     - Medio   => 75 pontos                             |\n";
+    cout << "|     - Dificil => 100 pontos                            |\n";
     cout << "| 4. eh necessario que haja ao menos 3 perguntas da      |\n";
-    cout << "|    dificuldade escolhida para jogar.                  |\n";
-    cout << "| 5. Voce também escolhe o tema das perguntas.     |\n";
-    cout << "|    Temas disponíveis:                                 |\n";
-    cout << "|    - portugues, matematica, esportes, historia,       |\n";
-    cout << "|      computacao e ciencia.                            |\n";
-    cout << "| 6. As respostas devem ser informadas com A, B ou C.   |\n";
-    cout << "| 7. Ao final, sua pontuacao sera exibida.              |\n";
-    cout << "|                                                       |\n";
+    cout << "|    dificuldade escolhida para jogar.                   |\n";
+    cout << "| 5. Voce tambem escolhe o tema das perguntas.           |\n";
+    cout << "|    Temas disponiveis:                                  |\n";
+    cout << "|    - portugues, matematica, esportes, historia,        |\n";
+    cout << "|      computacao e ciencia.                             |\n";
+    cout << "| 6. As respostas devem ser informadas com A, B ou C.    |\n";
+    cout << "| 7. Ao final, sua pontuacao sera exibida.               |\n";
+    cout << "|                                                        |\n";
     cout << "+=======================================================+\n";
     cout << "\nPressione Enter para voltar ao menu...";
     cin.ignore();
