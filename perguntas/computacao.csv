@@ -1,0 +1,15 @@
+computacao;facil;Qual o nome do programa usado para navegar na internet?;Sistema Operacional;Navegador (Browser);Editor de Texto;b;50
+computacao;facil;O que e um 'email'?;Endereco de site;Um tipo de jogo;Correio Eletronico;c;50
+computacao;facil;Para que serve o comando 'Copiar e Colar'?;Duplicar informacao;Apagar informacao;Salvar um arquivo;a;50
+computacao;facil;Qual o dispositivo usado para digitar texto no computador?;Mouse;Teclado;Monitor;b;50
+computacao;facil;O que significa a sigla 'Wi-Fi'?;Um tipo de cabo;Uma marca de computador;Conexao de internet sem fio;c;50
+computacao;medio;Qual a funcao da Memoria RAM em um computador?;Armazenar dados permanentemente;Processar os graficos de jogos;Armazenar dados temporariamente para acesso rapido;c;75
+computacao;medio;O que e 'Hardware'?;As pecas fisicas de um computador;Os programas de um computador;A conexao com a internet;a;75
+computacao;medio;Qual linguagem e a base para a estrutura de todas as paginas da web?;CSS;HTML;JavaScript;b;75
+computacao;medio;O que e um 'backup'?;Um programa para limpar o computador;Uma copia de seguranca de arquivos;Uma atualizacao do sistema;b;75
+computacao;medio;O que e um 'algoritmo'?;Uma peca do computador;Uma sequencia de passos para resolver um problema;Um tipo de virus;b;75
+computacao;dificil;O que significa a sigla 'DNS' no contexto de redes?;Domain Name System (Sistema de Nomes de Dominio);Digital Network Service (Servico de Rede Digital);Data Naming Standard (Padrao de Nomenclatura de Dados);a;100
+computacao;dificil;Qual a principal diferenca entre os protocolos TCP e UDP?;TCP e mais rapido que UDP;TCP garante a entrega de pacotes, UDP nao;TCP e usado para video, UDP para emails;b;100
+computacao;dificil;O que representa o 'O' na Notacao Big O (complexidade de algoritmos)?;O numero de operacoes;Otimizacao do codigo;Ordem de grandeza do crescimento;c;100
+computacao;dificil;O que e 'Software Livre'?;Software que respeita a liberdade do usuario para usar, modificar e distribuir;Software que e sempre gratuito;Software sem virus;a;100
+computacao;dificil;O que e um ataque de 'phishing'?;Um virus que apaga arquivos;Tentativa de obter dados sensiveis se passando por uma entidade confiavel;Uma sobrecarga de um servidor;b;100
